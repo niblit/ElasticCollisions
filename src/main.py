@@ -1,25 +1,27 @@
 import pygame
 from particle import Particle, get_distance
 
-FPS = 60
+FPS = 120
 SCREEN_SIZE = 800
 BACKGROUND = (0, 0, 0)
-QUANTITY = 100
-RADIUS = 5
+QUANTITY = 10
+RADIUS = 50
 
 
 def main():
     particles = list()
     for particle_id in range(QUANTITY):
-        while True:
+        for i in range(1_000):
             par = Particle(particle_id, RADIUS, SCREEN_SIZE)
             bad_spawn = False
             for position in particles:
-                if get_distance(*par.position, *position.position) <= (RADIUS * 2):
+                if get_distance(*par.position, *position.position) <= (RADIUS * 2.5):
                     bad_spawn = True
             if not bad_spawn:
                 particles.append(par)
                 break
+            else:
+                print(f"Bad spawn, retry {i} of 1,000")
 
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_SIZE, SCREEN_SIZE))

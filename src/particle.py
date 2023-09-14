@@ -29,8 +29,8 @@ class Particle:
         self.particle_id = particle_id
         self.radius = radius
         self.screen_size = screen_size
-        self.position = [randint(self.radius * 2, screen_size - self.radius * 2), randint(10, screen_size - self.radius * 2)]
-        self.velocity = [randint(-20, 20), randint(-20, 20)]
+        self.position = [randint(int(self.radius * 2.5), int(screen_size - self.radius * 2.5)), randint(int(self.radius * 2.5), int(screen_size - self.radius * 2.5))]
+        self.velocity = [randint(-25, 25), randint(-25, 25)]
         self.acceleration = [0, 0]
 
         while True:
