@@ -1,8 +1,8 @@
 import pygame
 from particle import Particle, get_distance
 
-FPS = 120
-SCREEN_SIZE = 800
+FPS = 60
+SCREEN_SIZE = 600
 BACKGROUND = (0, 0, 0)
 QUANTITY = 10
 RADIUS = 50
