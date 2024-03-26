@@ -25,11 +25,7 @@ def main():
 
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_SIZE, SCREEN_SIZE))
-<<<<<<< HEAD
-    pygame.display.set_caption("Collisions")
-=======
     pygame.display.set_caption("Python simulation")
->>>>>>> 28a3626 (New title)
     clock = pygame.time.Clock()
 
     running = True
