@@ -25,7 +25,7 @@ def main():
 
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_SIZE, SCREEN_SIZE))
-    pygame.display.set_caption("Collisions")
+    pygame.display.set_caption("Balls")
     clock = pygame.time.Clock()
 
     running = True
